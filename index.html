@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400' rel='stylesheet' type='text/css'>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body ng-app="HowardDev" ng-cloak>
+
+<!------------------->
+<!-- Header & Nav --->
+<!------------------->
+<header class="navbar-fixed">
+<nav class="transparent">
+    <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo">Howard | Development</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+            <li><a href="work.ejs">Our Work</a></li>
+            <li><a href="services.ejs">Services</a></li>
+            <li><a href="about.ejs">About</a></li>
+            <li>
+            <a class="btn btn-small waves-effect waves-light red z-depth-2" type="submit" name="action2">Contact
+
+            </a>
+            </li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="sass.html">Home</a></li>
+            <li><a href="badges.html">Our Work</a></li>
+            <li><a href="collapsible.html"> Services </a></li>
+            <li><a href="mobile.html"> About</a></li>
+            <li>
+                <a class="btn btn-small waves-effect waves-light red z-depth-2" type="submit" name="action2">Contact
+                    <span class="nav-icon"> <i class="material-icons right">check</i></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+</header>
+
+<!------------------->
+<!-- Introduction --->
+<!------------------->
+<div class="container-fluid jumbotron z-depth-2 text-center" >
+
+<h1 class="container white-text">Web Design made simple</h1>
+    <p class="lead">Welcome to a brand-new development. A development that will change how you view website and mobile apps.</p>
+<div class="center center-align">
+
+    <div class="action-buttons">
+        <button class="btn btn-large waves-effect waves-light light-blue z-depth-2" type="submit" name="action1">Learn More
+        </button>
+        <button class="btn btn-large waves-effect waves-light red z-depth-2" type="submit" name="action2">Contact Us
+            <span class="glyphicon glyphicon-send"></span>
+        </button>
+    </div>
+
+</div>
+</div>
+
+
+<!-- Phil -->
+<div class="mission-statement">
+<div class="text-center container">
+    <div class="mission">
+    <h1>Our Philosophy </h1>
+    <p>We deliver professional responsive designs, WordPress development, and dependable support and maintenance for your brand,  </p>
+    </div>
+</div>
+</div>
+
+
+<!------------------->
+<!---- Portfolio ---->
+<!------------------->
+
+<div class="portfolio text-center z-depth-1" ng-controller="WorkController">
+    <h1 class="port-head">Our Work</h1>
+    <p class="lead">- What we have done -</p>
+    <div class="container">
+        <div class="row card-section" >
+            <div class="col s4" ng-repeat="project in projects">
+                <div class="card hoverable z-depth-3">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" ng-src="{{project.image}}" height="250">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{project.title}}<i class="material-icons right">more_vert</i></span>
+                        <hr style="max-width: 75%;">
+                        <a class="btn waves-effect waves-light btn-port" ng-href="{{project.link}}">Visit Page!</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{project.title}}<i class="material-icons right">close</i></span>
+                        <hr style="max-width: 75%;">
+                        <p>{{project.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+
+<br>
+
+
+
+<!------------------->
+<!---- Services ---->
+<!------------------->
+<div class="services text-center" ng-controller="ServiceController">
+    <h1>Services</h1>
+    <p>- What We are capablie of - </p>
+    <div class="container">
+        <div class="row" >
+            <div class="col s3" ng-repeat="service in services">
+                <span><i class="large material-icons">{{service.icon}}</i></span>
+                <h2>{{service.title}}</h2>
+
+                <p>{{service.desc}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------->
+<!------ About ------>
+<!------------------->
+<div class="about text-center">
+    <div class="container">
+        <h1>About </h1>
+        <img ng-src="">
+    </div>
+</div>
+<!------------------->
+<!-- Contact Form --->
+<!------------------->
+<div class="container">
+    <h2 class="grey-text darken-1 center-align"> Contact Us</h2>
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email_address" type="email" class="validate">
+                    <label for="email_address">Email</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"  rows="20"></textarea>
+                    <label for="textarea1">Textarea</label>
+                </div>
+            </div>
+            <div class="text-center">
+            <button class="btn waves-effect waves-light text-center" type="submit" name="action">Submit
+                <span class="glyphicon glyphicon-send"></span>
+            </button>
+            </div>
+    </form>
+</div>
+
+
+<!-- Bower Components & Vendors -->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/Materialize/dist/js/materialize.min.js"></script>
+
+<!-- Main Scripts -->
+<script src="public/scripts/main.js"></script>
+<script src="public/scripts/controllers/controllers.js"></script>
+</body>
+</html>

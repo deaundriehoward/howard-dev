@@ -1,0 +1,11 @@
+{
+  "name": "hd4",
+  "version": "1.4.0",
+  "description": "The 4th edition to Howard Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deaundrie Howard",
+  "license": "ISC"
+}

@@ -1,0 +1,179 @@
+/*----------------*/
+/*--- Basic ---*/
+/*----------------*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    /**/
+    font-weight: 300;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+/*--------------------*/
+/*--- Introduction ---*/
+/*--------------------*/
+.jumbotron{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1463620695885-8a91d87c53d0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f604803e97c9636a4af3cb6bbe11b9f7');
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width:100%;
+}
+
+.jumbotron h1 {
+    padding-top: 15%;
+    font-weight: 100;
+}
+
+.card.small {
+    height: 300px;
+}
+
+.card.small, .card.medium, .card.large {
+    position: relative;
+}
+
+.card.small .card-image, .card.medium .card-image, .card.large .card-image {
+    max-height: 60%;
+    overflow: hidden;
+}
+
+.card .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    border: 0;
+}
+
+
+
+/*--------------------*/
+/*--- Header & Nav ---*/
+/*--------------------*/
+nav ul a {
+    transition: background-color .3s;
+    font-size: 2rem;
+    color: dimgrey;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 45px;
+    cursor: pointer;
+}
+
+nav ul a:hover {
+    text-decoration: none;
+    color:white;
+}
+
+nav .brand-logo {
+
+    position: absolute;
+    color: dimgray;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap;
+}
+
+nav .brand-logo:hover {
+    text-decoration: none;
+}
+
+.action-buttons {
+    padding: 0 5%;
+}
+
+.nav-icon {
+    padding: 0;
+    margin-top: -5%;
+}
+
+.lead {
+    color: white;
+}
+
+.transparent {
+    opacity: 0.75;
+    background-color: white !important;
+}
+
+/*------------------*/
+/*--- Philosophy ---*/
+/*------------------*/
+.mission-statement {
+    height: 30%;
+}
+
+.mission {
+    font-size: 24px;
+}
+
+
+/*-----------------*/
+/*--- Portfolio ---*/
+/*----------------*/
+.portfolio {
+    background-color: #9F9F9F;
+    height: 80%;
+}
+
+.btn-port:hover {
+    background-color: transparent;
+    border: 1px solid #F44336;
+    color: #F44336;
+}
+
+.btn-port {
+    background-color: #F44336;
+    color: #fff;
+}
+
+/*----------------*/
+/*--- Services ---*/
+/*----------------*/
+.services {
+ height: 40%;
+}
+
+.material-icons {
+    color: #F44336;
+}
+.btn-serve:hover {
+    background-color: transparent;
+    border: 1px solid #03A9F4;
+    color: #03A9F4;
+}
+
+.btn-serve {
+    background-color: #03A9F4;
+    color: #fff;
+}
+
+/*----------------*/
+/*--- About ---*/
+/*----------------*/
+.about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1463320697897-897fc554409a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=8636af40ff69f86a618193801db61b45');
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50%;
+    width: 100%;
+    margin-top: 10%;
+    color: #fff;
+}
